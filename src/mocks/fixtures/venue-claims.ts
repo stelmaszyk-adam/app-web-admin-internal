@@ -1,0 +1,32 @@
+export const venueClaims = [
+  {
+    id: "clm_01JADM3001",
+    venueId: "ven_01JADM0002",
+    venueName: "Neon Club Gdańsk",
+    claimantId: "usr_01JADM1003",
+    claimantEmail: "organizer@neonclub.pl",
+    documentUrl: "https://r2.wydarzka.dev/claims/neon-club-ceidg.pdf",
+    status: "pending",
+    createdAt: "2026-09-09T12:00:00Z",
+  },
+  {
+    id: "clm_01JADM3002",
+    venueId: "ven_01JADM0003",
+    venueName: "Hala Targowa Wschód",
+    claimantId: "usr_01JADM1004",
+    claimantEmail: "kontakt@halatargowa.pl",
+    documentUrl: "https://r2.wydarzka.dev/claims/hala-targowa-ceidg.pdf",
+    status: "pending",
+    createdAt: "2026-09-11T09:20:00Z",
+  },
+  {
+    id: "clm_01JADM3003",
+    venueId: "ven_01JADM0004",
+    venueName: "Park Miejski Łódź",
+    claimantId: "usr_01JADM1005",
+    claimantEmail: "biuro@parkmiejski.pl",
+    documentUrl: "https://r2.wydarzka.dev/claims/park-miejski-ceidg.pdf",
+    status: "pending",
+    createdAt: "2026-09-13T16:10:00Z",
+  },
+];
