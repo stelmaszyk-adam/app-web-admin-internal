@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+/* Dark mode: toggled via <html class="dark"> */
+@custom-variant dark (&:is(.dark, .dark *));
+
+/* ─── Radiant Curator Design Tokens ─── */
+
+@theme inline {
+  /* Brand */
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+
+  /* Surfaces */
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  /* Outline */
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  /* Feedback */
+  --color-error: var(--error);
+  --color-error-container: var(--error-container);
+  --color-on-error: var(--on-error);
+  --color-on-error-container: var(--on-error-container);
+  --color-success: var(--success);
+  --color-success-container: var(--success-container);
+  --color-on-success: var(--on-success);
+  --color-on-success-container: var(--on-success-container);
+  --color-warning: var(--warning);
+  --color-warning-container: var(--warning-container);
+  --color-on-warning: var(--on-warning);
+  --color-on-warning-container: var(--on-warning-container);
+  --color-info: var(--info);
+  --color-info-container: var(--info-container);
+  --color-on-info: var(--on-info);
+  --color-on-info-container: var(--on-info-container);
+
+  /* Background / Foreground aliases (for shadcn compatibility) */
+  --color-background: var(--surface);
+  --color-foreground: var(--on-surface);
+
+  /* Font */
+  --font-sans: var(--font-inter);
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Tinted ambient shadows */
+  --shadow-sm: 0 4px 16px -2px rgba(73, 0, 204, 0.08);
+  --shadow-md: 0 8px 30px -4px rgba(73, 0, 204, 0.1);
+  --shadow-lg: 0 16px 48px -8px rgba(73, 0, 204, 0.12);
+  --shadow-xl: 0 24px 60px -12px rgba(73, 0, 204, 0.15);
+
+  /* Motion */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-cinematic: 800ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0, 1);
+  --easing-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --easing-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Light Mode Tokens ─── */
+:root {
+  /* Brand */
+  --primary: #4900cc;
+  --primary-container: #6134e3;
+  --on-primary: #ffffff;
+  --on-primary-container: #f0e6ff;
+  --secondary: #8935b6;
+  --secondary-container: #f3e5f9;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #3b1558;
+  --tertiary: #a8275a;
+  --tertiary-container: #fce4ec;
+  --on-tertiary: #ffffff;
+  --on-tertiary-container: #5c0a28;
+
+  /* Surfaces */
+  --surface: #fcf8ff;
+  --surface-dim: #ddd6e5;
+  --surface-bright: #fefbff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f7f0fc;
+  --surface-container: #f1eaf7;
+  --surface-container-high: #ebe4f2;
+  --surface-container-highest: #e5deec;
+  --surface-tint: #4900cc;
+  --on-surface: #1c1a22;
+  --on-surface-variant: #49454f;
+
+  /* Outline */
+  --outline: #7a757f;
+  --outline-variant: #cbc4d0;
+
+  /* Feedback */
+  --error: #d32f2f;
+  --error-container: #fce4ec;
+  --on-error: #ffffff;
+  --on-error-container: #5c1010;
+  --success: #2e7d32;
+  --success-container: #e8f5e9;
+  --on-success: #ffffff;
+  --on-success-container: #1b4d1e;
+  --warning: #f57c00;
+  --warning-container: #fff3e0;
+  --on-warning: #ffffff;
+  --on-warning-container: #5c2e00;
+  --info: #6134e3;
+  --info-container: #f0e6ff;
+  --on-info: #ffffff;
+  --on-info-container: #1c0066;
+}
+
+/* ─── Dark Mode Tokens ─── */
+.dark {
+  /* Brand */
+  --primary: #cfbcff;
+  --primary-container: #4900cc;
+  --on-primary: #2d0080;
+  --on-primary-container: #e9ddff;
+  --secondary: #e2b6f3;
+  --secondary-container: #6a2895;
+  --on-secondary: #4a1a6b;
+  --on-secondary-container: #f3e5f9;
+  --tertiary: #ffb2c5;
+  --tertiary-container: #880643;
+  --on-tertiary: #5c0a28;
+  --on-tertiary-container: #fce4ec;
+
+  /* Surfaces */
+  --surface: #141218;
+  --surface-dim: #141218;
+  --surface-bright: #3b383e;
+  --surface-container-lowest: #0f0d13;
+  --surface-container-low: #1d1a22;
+  --surface-container: #211f26;
+  --surface-container-high: #2b2930;
+  --surface-container-highest: #36343b;
+  --surface-tint: #cfbcff;
+  --on-surface: #e6e1e6;
+  --on-surface-variant: #cbc4d0;
+
+  /* Outline */
+  --outline: #958e99;
+  --outline-variant: #49454f;
+
+  /* Feedback */
+  --error: #ffb4ab;
+  --error-container: #93000a;
+  --on-error: #690005;
+  --on-error-container: #ffdad6;
+  --success: #a5d6a7;
+  --success-container: #1b5e20;
+  --on-success: #1b4d1e;
+  --on-success-container: #c8e6c9;
+  --warning: #ffcc80;
+  --warning-container: #e65100;
+  --on-warning: #5c2e00;
+  --on-warning-container: #fff3e0;
+}
+
+/* ─── Base Styles ─── */
+body {
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-inter, system-ui, sans-serif);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(203, 196, 208, 0.1);
+}
+
+.dark .glass {
+  background: rgba(33, 31, 38, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(73, 69, 79, 0.1);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}

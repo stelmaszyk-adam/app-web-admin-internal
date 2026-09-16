@@ -15,35 +15,35 @@ Initialize the Next.js web-admin-internal project. This app is IP-restricted, in
 
 ### 1. Initialize Next.js project
 
-- [ ] P0 Create Next.js project with App Router and TypeScript strict mode (`create-next-app --typescript`)
-- [ ] P0 Configure `tsconfig.json` with `strict: true`
-- [ ] P0 Set up `pnpm` as package manager
-- [ ] P0 Pin all dependency versions (no `^` or `~` prefixes)
-- [ ] P0 Set dev server port to `3003` (B2C: 3001, B2B: 3002, Admin: 3003)
+- [x] P0 Create Next.js project with App Router and TypeScript strict mode (`create-next-app --typescript`)
+- [x] P0 Configure `tsconfig.json` with `strict: true`
+- [x] P0 Set up `pnpm` as package manager
+- [x] P0 Pin all dependency versions (no `^` or `~` prefixes)
+- [x] P0 Set dev server port to `3003` (B2C: 3001, B2B: 3002, Admin: 3003)
 
 ### 2. Styling and component library
 
-- [ ] P0 Install and configure Tailwind CSS
-- [ ] P0 Install and configure shadcn/ui with "Radiant Curator" design tokens
-- [ ] P0 Configure Tailwind dark mode (`class` strategy)
+- [x] P0 Install and configure Tailwind CSS
+- [x] P0 Install and configure shadcn/ui with "Radiant Curator" design tokens
+- [x] P0 Configure Tailwind dark mode (`class` strategy)
 
 ### 3. Dev tooling
 
-- [ ] P0 Configure ESLint (Next.js recommended config)
-- [ ] P0 Configure Prettier
-- [ ] P0 Set up Husky + lint-staged (ESLint + Prettier on staged files)
-- [ ] P0 Add `.env.example`: `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_API_MOCKING=false`
-- [ ] P0 Add `.gitignore`
+- [x] P0 Configure ESLint (Next.js recommended config)
+- [x] P0 Configure Prettier
+- [~] P0 Set up Husky + lint-staged (ESLint + Prettier on staged files) — deferred: `husky` + `lint-staged` are installed and configured (package.json `lint-staged` block, `prepare` script wired `.husky/_` helpers), but writing `.husky/pre-commit` itself was blocked by the session's sensitive-file protection with no interactive user to approve it; needs a human to create it (single line: `pnpm exec lint-staged`)
+- [x] P0 Add `.env.example`: `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_API_MOCKING=false`
+- [x] P0 Add `.gitignore`
 
 ### 4. Folder structure
 
-- [ ] P0 `src/app/` — App Router pages and layouts
-- [ ] P0 `src/components/` — shared UI components; `src/components/ui/` — shadcn/ui
-- [ ] P0 `src/lib/` — utilities; `src/api/` — client + generated types; `src/hooks/` — custom hooks
+- [x] P0 `src/app/` — App Router pages and layouts
+- [x] P0 `src/components/` — shared UI components; `src/components/ui/` — shadcn/ui
+- [x] P0 `src/lib/` — utilities; `src/api/` — client + generated types; `src/hooks/` — custom hooks
 
 ### 5. Scripts
 
-- [ ] P0 `pnpm dev` (port 3003), `pnpm build`, `pnpm lint`, `pnpm type-check`, `pnpm api:generate`
+- [x] P0 `pnpm dev` (port 3003), `pnpm build`, `pnpm lint`, `pnpm type-check`, `pnpm api:generate`
 
 ## Acceptance Criteria
 

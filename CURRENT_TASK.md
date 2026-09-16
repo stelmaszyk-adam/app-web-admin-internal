@@ -4,7 +4,7 @@
 > `[ ]`/`[x]` checkboxes inside each task file. Regenerate this file with
 > `python3 scripts/task-utils.py sync web-admin-internal` (run from the workspace root).
 
-**Next:** `tasks/phase-0-preparation/0-00-project-scaffold.md`
+**Next:** `tasks/phase-0-preparation/0-01-api-client-and-msw.md`
 
 ---
 
@@ -29,7 +29,7 @@ run `pnpm lint && pnpm type-check` (backend/mobile: also `pnpm test`), then run
 ## Task Sequence
 
 ### Phase 0 — Preparation
-- [ ] `tasks/phase-0-preparation/0-00-project-scaffold.md` _(17 open)_
+- [x] `tasks/phase-0-preparation/0-00-project-scaffold.md`
 - [ ] `tasks/phase-0-preparation/0-01-api-client-and-msw.md` _(12 open)_
 - [ ] `tasks/phase-0-preparation/0-02-admin-components.md` _(6 open)_
 - [ ] `tasks/phase-0-preparation/0-03-github-actions-ci-cd.md` _(5 open)_
