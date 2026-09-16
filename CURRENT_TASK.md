@@ -1,42 +1,49 @@
-# Current Task Pointer — web-admin-internal
+# Task Sequence — web-admin-internal
 
-> **Update this file after completing each task.** Change `Current` to point at the next file, and tick the box in the sequence below.
+> **Do not edit ticks or the Next line by hand.** Progress is derived from the
+> `[ ]`/`[x]` checkboxes inside each task file. Regenerate this file with
+> `python3 scripts/task-utils.py sync web-admin-internal` (run from the workspace root).
 
-**Current:** `tasks/phase-0-preparation/0-00-project-scaffold.md`
+**Next:** `tasks/phase-0-preparation/0-00-project-scaffold.md`
 
 ---
 
 ## How to run the task loop
 
-Start a session in this repo and run:
+From the workspace root (one task file per fresh Claude session, with plan →
+implement → verify → review → commit):
 
 ```
-/loop
+./scripts/run-tasks.sh web-admin-internal              # run until done or blocked
+./scripts/run-tasks.sh web-admin-internal --max-tasks 1
+./scripts/run-tasks.sh web-admin-internal --dry-run
 ```
 
-With this prompt:
-> Read `CURRENT_TASK.md`. Open the file pointed to by **Current**. Implement every unchecked `[ ]` item. When an item is complete, change it to `[x]` in the task file. After all items in the current file are done, update `CURRENT_TASK.md` to point at the next file in the sequence below, and start on it immediately. Work through one task file at a time. Run `pnpm lint && pnpm type-check` after each task file is complete and fix any errors before moving on.
+Interactive alternative inside this repo: open the file named in **Next**,
+implement its open items, tick each `[x]` only once the code and tests exist,
+run `pnpm lint && pnpm type-check` (backend/mobile: also `pnpm test`), then run
+`sync` again.
 
 ---
 
 ## Task Sequence
 
 ### Phase 0 — Preparation
-- [ ] `tasks/phase-0-preparation/0-00-project-scaffold.md`
-- [ ] `tasks/phase-0-preparation/0-01-api-client-and-msw.md`
-- [ ] `tasks/phase-0-preparation/0-02-admin-components.md`
-- [ ] `tasks/phase-0-preparation/0-03-github-actions-ci-cd.md`
+- [ ] `tasks/phase-0-preparation/0-00-project-scaffold.md` *(17 open)*
+- [ ] `tasks/phase-0-preparation/0-01-api-client-and-msw.md` *(12 open)*
+- [ ] `tasks/phase-0-preparation/0-02-admin-components.md` *(6 open)*
+- [ ] `tasks/phase-0-preparation/0-03-github-actions-ci-cd.md` *(5 open)*
 
 ### Phase 1 — Core
-- [ ] `tasks/phase-1-core/1-01-auth.md`
+- [ ] `tasks/phase-1-core/1-01-auth.md` *(14 open)*
 
 ### Phase 3 — Admin Panel
-- [ ] `tasks/phase-3-admin-panel/3-01-event-moderation.md`
-- [ ] `tasks/phase-3-admin-panel/3-02-venue-management.md`
-- [ ] `tasks/phase-3-admin-panel/3-03-user-management.md`
-- [ ] `tasks/phase-3-admin-panel/3-04-kpi-dashboard.md`
-- [ ] `tasks/phase-3-admin-panel/3-05-error-and-empty-states.md`
-- [ ] `tasks/phase-3-admin-panel/3-06-blog-moderation.md`
+- [ ] `tasks/phase-3-admin-panel/3-01-event-moderation.md` *(9 open)*
+- [ ] `tasks/phase-3-admin-panel/3-02-venue-management.md` *(15 open)*
+- [ ] `tasks/phase-3-admin-panel/3-03-user-management.md` *(4 open)*
+- [ ] `tasks/phase-3-admin-panel/3-04-kpi-dashboard.md` *(6 open)*
+- [ ] `tasks/phase-3-admin-panel/3-05-error-and-empty-states.md` *(9 open)*
+- [ ] `tasks/phase-3-admin-panel/3-06-blog-moderation.md` *(12 open)*
 
 ### Phase 4 — Testing
-- [ ] `tasks/phase-4-testing/4-01-smoke-tests.md`
+- [ ] `tasks/phase-4-testing/4-01-smoke-tests.md` *(7 open)*
